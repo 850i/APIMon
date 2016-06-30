@@ -1,0 +1,2 @@
+﻿Name of the hook class should be Hook_"API name"
+This name convention is assumed when looking for all classes implementing hooks

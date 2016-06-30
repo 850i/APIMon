@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48F4C343-AE06-4B3E-A6CB-70287D68BFDA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>APIMonLib</RootNamespace>
+    <AssemblyName>APIMonLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>Examples.snk</AssemblyOriginatorKeyFile>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApiFullName.cs" />
+    <Compile Include="BlockingQueue.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="ConsolePrinter.cs" />
+    <Compile Include="Hooks\AbstractHookDescription.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_ConnectNamedPipe.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_CreateNamedPipeW.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_CreateProcessInternalW.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_CreateRemoteThread.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_CreateThread.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_ExitProcess.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_GetCurrentThreadId.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_LoadLibraryW.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_OpenProcess.cs" />
+    <Compile Include="Hooks\kernel32.dll\Hook_ReadProcessMemory.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_LdrLoadDll.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_LdrShutdownProcess.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwCreateFile.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwCreateKey.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwCreateSection.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwDuplicateObject.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwMapViewOfSection.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwOpenFile.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwOpenKey.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwReadFile.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwSetValueKey.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwTerminateProcess.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwWriteFile.cs" />
+    <Compile Include="Hooks\shell32.dll\Shell32DllSupport.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_accept.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_bind.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_connect.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_listen.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_send.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_WSAAccept.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_WSAConnect.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_WSASend.cs" />
+    <Compile Include="Hooks\ws2_32.dll\Hook_WSASocket.cs" />
+    <Compile Include="Hooks\ws2_32.dll\WS2_32Support.cs" />
+    <Compile Include="InterceptorCallBackInterface.cs" />
+    <Compile Include="ChannelReceiver.cs" />
+    <Compile Include="ChannelReceiverStsukoProxy.cs" />
+    <Compile Include="HookDescription.cs" />
+    <Compile Include="HookRegistry.cs" />
+    <Compile Include="Hooks\ntdll.dll\Hook_ZwClose.cs" />
+    <Compile Include="Hooks\kernel32.dll\Kernel32Support.cs" />
+    <Compile Include="MessageFromInjector.cs" />
+    <Compile Include="NoSuchHookException.cs" />
+    <Compile Include="Hooks\ntdll.dll\NtDllSupport.cs" />
+    <Compile Include="ProcessingException.cs" />
+    <Compile Include="RemoteHookingException.cs" />
+    <Compile Include="TransferUnitSender_New.cs" />
+    <Compile Include="TransferUnit.cs" />
+    <Compile Include="TransferUnitReceiver.cs" />
+    <Compile Include="TransferUnitSender.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Examples.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyHook\EasyHook.csproj">
+      <Project>{AB53862B-3B5C-4EFC-9787-1F01199EBFBF}</Project>
+      <Name>EasyHook</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NoticeOnHooksNames.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
