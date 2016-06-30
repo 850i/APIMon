@@ -23,6 +23,7 @@ May launch, inject library, kill processes from predefined list.
 APIMon project can not enforce security and can be easily avoided by the modern malware. Nevertheless APIMon is very useful tool for reverse engineering of the program behavior.
 
 The application of Colored Petri Nets to malware detection is described in the articles:
-A. G. Tokhtabayev, V. A. Skormin and A. M. Dolgikh, "Detection of Worm Propagation Engines in the System Call Domain using Colored Petri Nets", IPCCC 2008
 
-A. Tokhtabayev, V. Skormin and A Dolgikh, “Expressive, Efficient and Obfuscation Resilient Behavior Based IDS” ESORICS 2010, September, 2010 Athens, Greece.
+1. A. G. Tokhtabayev, V. A. Skormin and A. M. Dolgikh, "Detection of Worm Propagation Engines in the System Call Domain using Colored Petri Nets", IPCCC 2008
+
+2. A. Tokhtabayev, V. Skormin and A Dolgikh, “Expressive, Efficient and Obfuscation Resilient Behavior Based IDS” ESORICS 2010, September, 2010 Athens, Greece.
